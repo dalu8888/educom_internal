@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>閲覧 | 顧客情報</title>
+<link rel="stylesheet" type="text/css" href="resources/css/cmn_style.css">
+<link rel="stylesheet" type="text/css" href="resources/css/cmn_layout.css">
+<script type="text/javascript" src="resources/js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="resources/js/common.js"></script>
+<script type="text/javascript" language="javascript" src="resources/js/fixed_midashi.js"></script>
+<script>
+window.onload = function()
+{
+    FixedMidashi.create();
+};
+$(document).ready(function(){
+    $('.pulldownButton').click(function(){
+        $(this).next('.pulldownContents').stop(true, true).slideToggle();
+		$(this).toggleClass("active");
+    });
+});
+$(function() {
+  $('.searchArea .tabList').click(function() {
+    var index = $('.searchArea .tabList').index(this);
+    $('.searchArea .tabList').removeClass('active');
+    $(this).addClass('active');
+    $('.searchArea .tabContents').removeClass('show').eq(index).addClass('show');
+  });
+});
+$(function() {
+  $('.listArea .tabList').click(function() {
+    var index = $('.listArea .tabList').index(this);
+    $('.listArea .tabList').removeClass('active');
+    $(this).addClass('active');
+    $('.listArea .tabContents').removeClass('show').eq(index).addClass('show');
+  });
+});
+</script> 
+</head>
+
+<body>
+	<header id="header">
+		<h1 class="pegeTitle">顧客情報</h1>
+           	  <div class="userArea">
+	    <p>●●●●部　江戸太郎</p>
+	    <p class="btnBlue"><img src="resources/img/icon_logout.png" width="20" height="19" alt=""/></p>
+      </div>
+    </header>
+
+	<nav id="pageNav">
+    	<div id="hamburger" class="btnBlue pulldownButton"><span class="icon"></span></div>
+        <ul class="pulldownContents">
+            <li class="listItem">サポート情報</li>
+            <li class="listItem">ユーザ情報</li>
+            <li class="listItem">顧客情報</li>
+            <li class="listItem">営業日情報</li>
+            <li class="listItem">パスワード変更</li>
+        </ul>
+	</nav>
+    
+<div class="searchArea">
+
+
+    	<div class="tabSwitchingArea">
+            <ul class="clearfix">
+              <li class="buttonArea btnBlue"><img src="resources/img/icon_note.png" class="icon" />新規登録</li>
+              <li class="buttonArea btnBlue"><img src="resources/img/icon_area.png" class="icon" />地域情報設定 </li>
+              <li class="buttonArea btnBlue"><img src="resources/img/icon_excel.png" class="icon" />Excel出力</li>
+            </ul>
+
+          <div class="tabContents show"><!--簡易検索-->
+
+            <div class="clearfix bgColor_blue ptb02">
+                <p class="title flImgL">検索条件</p>
+               
+               
+                <div class="flR"><p class="title flL">表示件数：</p>
+                <div class="flR pulldown w172px mr05">
+                  <div class="pulldownButton  w172px">30件</div>
+                  <div class="pulldownContents  w172px">
+                    <ul>
+                      <li>20件</li>
+                      <li>30件</li>
+                      <li>40件</li>
+                      <li>50件</li>
+                    </ul>
+                  </div>
+                </div>
+</div>
+                
+                
+            </div>
+                        <div class="searchTableLine clearfix top">
+           	  <p class="title w92px bgColor_lightGray">都道府県</p>
+                    <p><input type="text" class="inputText w192px" value="東京都"></p>
+                    <p class="title w92px bgColor_lightGray">市区町村</p>
+                    <p><input type="text" class="inputText w484px"></p>
+            </div>
+            <div class="searchTableLine clearfix top">
+           	  <p class="title w92px bgColor_lightGray">学校名</p>
+              <p><input type="text" class="inputText w484px"></p>
+              <p class="btnBlue"><img src="resources/img/icon_search.png" class="icon" />更新</p>
+            </div>
+
+          </div>
+
+            <div class="tabContents"><!--詳細検索-->
+				<p class="title bgColor_blue">詳細検索</p>
+            </div>
+        </div>
+    <!-- /.searchArea --></div>
+
+<div class="wrapperWrap clearfix">
+	<div class="listArea widthFull flL clearfix">
+        <div class="pulldown">
+
+            <div class="pulldownContents">
+                <ul>
+                <li><input type="checkbox" class="checkBox" id="time-required"><label for="time-required">所要時間</label></li>
+                <li><input type="checkbox" class="checkBox" id="responding-info"><label for="responding-info">対応情報</label></li>
+                </ul>
+            </div>
+        </div>
+        
+
+
+
+<div class="pager">
+    <ul>
+        <li><a href="#"><</a></li>
+        <li>
+          <p>5</p>
+        </li>
+        <li><a href="#">></a></li>
+    </ul>
+</div>
+
+   	  <div class="fream_gray">
+                <div class="scrollArea everyCall">
+    <table _fixedhead='rows:1; cols:0; div-auto-size: none;'>
+    <thead>
+      <tr class="bgColor_blue">
+        <th class="col8 taC"><a href="#">都道府県<img src="resources/img/asc.gif" width="21" height="4" alt="" class="icon"/></a></th>
+        <th class="col8 taC"><a href="#">市区町村<img src="resources/img/bg.gif" width="21" height="9" alt="" class="icon"/></a></th>
+        <th class="col5 taC"><a href="#">学校名<img src="resources/img/bg.gif" width="21" height="9" alt="" class="icon"/></a></th>
+        <th class="col5 taC">学校種別</th>
+        <th class="col5 taC">電話番号</th>
+        <th class="col8 taC">営業カレンダー</th>
+        <th class="col8 taC"><a href="#">状態<img src="resources/img/bg.gif" width="21" height="9" alt="" class="icon"/></a></th>
+        <th class="col5 taC"> </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="col8">東京都</td>
+        <td class="col8">江戸川区</td>
+        <td class="col5">江戸川小学校</td>
+        <td class="col5">特別支援学校小学部</td>
+        <td class="col5">03-1234-5678</td>
+        <td class="col8">標準</td>
+        <td class="col8">有効</td>
+        <td class="col5 taC"><a href="#">詳細</a><a href="#" class="ml20">編集</a></td>
+      </tr>
+      <tr>
+        <td class="col8">東京都</td>
+        <td class="col8">江戸川区</td>
+        <td class="col5">江戸川小学校</td>
+        <td class="col5">特別支援学校小学部</td>
+        <td class="col5">03-1234-5678</td>
+        <td class="col8">標準</td>
+        <td class="col8">有効</td>
+        <td class="col5 taC"><a href="#">詳細</a><a href="#" class="ml20">編集</a></td>
+      </tr>
+      <tr>
+        <td class="col8">東京都</td>
+        <td class="col8">江戸川区</td>
+        <td class="col5">江戸川小学校</td>
+        <td class="col5">特別支援学校小学部</td>
+        <td class="col5">03-1234-5678</td>
+        <td class="col8">標準</td>
+        <td class="col8">有効</td>
+        <td class="col5 taC"><a href="#">詳細</a><a href="#" class="ml20">編集</a></td>
+      </tr>
+      <tr>
+        <td class="col8">東京都</td>
+        <td class="col8">江戸川区</td>
+        <td class="col5">江戸川小学校</td>
+        <td class="col5">特別支援学校小学部</td>
+        <td class="col5">03-1234-5678</td>
+        <td class="col8">標準</td>
+        <td class="col8">有効</td>
+        <td class="col5 taC"><a href="#">詳細</a><a href="#" class="ml20">編集</a></td>
+      </tr>
+      <tr>
+        <td class="col8">東京都</td>
+        <td class="col8">江戸川区</td>
+        <td class="col5">江戸川小学校</td>
+        <td class="col5">特別支援学校小学部</td>
+        <td class="col5">03-1234-5678</td>
+        <td class="col8">標準</td>
+        <td class="col8">有効</td>
+        <td class="col5 taC"><a href="#">詳細</a><a href="#" class="ml20">編集</a></td>
+      </tr>
+      <tr>
+        <td class="col8">東京都</td>
+        <td class="col8">江戸川区</td>
+        <td class="col5">江戸川小学校</td>
+        <td class="col5">特別支援学校小学部</td>
+        <td class="col5">03-1234-5678</td>
+        <td class="col8">標準</td>
+        <td class="col8">有効</td>
+        <td class="col5 taC"><a href="#">詳細</a><a href="#" class="ml20">編集</a></td>
+      </tr>
+      <tr>
+        <td class="col8">東京都</td>
+        <td class="col8">江戸川区</td>
+        <td class="col5">江戸川小学校</td>
+        <td class="col5">特別支援学校小学部</td>
+        <td class="col5">03-1234-5678</td>
+        <td class="col8">標準</td>
+        <td class="col8">有効</td>
+        <td class="col5 taC"><a href="#">詳細</a><a href="#" class="ml20">編集</a></td>
+      </tr>
+      <tr>
+        <td class="col8">東京都</td>
+        <td class="col8">江戸川区</td>
+        <td class="col5">江戸川小学校</td>
+        <td class="col5">特別支援学校小学部</td>
+        <td class="col5">03-1234-5678</td>
+        <td class="col8">標準</td>
+        <td class="col8">有効</td>
+        <td class="col5 taC"><a href="#">詳細</a><a href="#" class="ml20">編集</a></td>
+      </tr>
+      <tr>
+        <td class="col8">東京都</td>
+        <td class="col8">江戸川区</td>
+        <td class="col5">江戸川小学校</td>
+        <td class="col5">特別支援学校小学部</td>
+        <td class="col5">03-1234-5678</td>
+        <td class="col8">標準</td>
+        <td class="col8">有効</td>
+        <td class="col5 taC"><a href="#">詳細</a><a href="#" class="ml20">編集</a></td>
+      </tr>
+      <tr>
+        <td class="col8">東京都</td>
+        <td class="col8">江戸川区</td>
+        <td class="col5">江戸川小学校</td>
+        <td class="col5">特別支援学校小学部</td>
+        <td class="col5">03-1234-5678</td>
+        <td class="col8">標準</td>
+        <td class="col8">有効</td>
+        <td class="col5 taC"><a href="#">詳細</a><a href="#" class="ml20">編集</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+    </div>
+<!-- /#wrapperWrap --></div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>詳細 | ユーザー情報</title>
+<link rel="stylesheet" type="text/css" href="resources/css/cmn_style.css">
+<link rel="stylesheet" type="text/css" href="resources/css/cmn_layout.css">
+<link rel="stylesheet" type="text/css" href="resources/css/alert.css">
+<script src="resources/js/jquery-latest.js" type="text/javascript"></script> 
+<script src="resources/js/jquery.tablesorter.min.js" type="text/javascript"></script> 
+<script type="text/javascript" src="resources/js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="resources/js/common.js"></script>
+<script type="text/javascript" language="javascript" src="resources/js/fixed_midashi.js"></script>
+<script>
+window.onload = function()
+{
+    FixedMidashi.create();
+};
+$(document).ready(function(){
+    $('.pulldownButton').click(function(){
+        $(this).next('.pulldownContents').stop(true, true).slideToggle();
+		$(this).toggleClass("active");
+    });
+});
+$(function() {
+  $('.searchArea .tabList').click(function() {
+    var index = $('.searchArea .tabList').index(this);
+    $('.searchArea .tabList').removeClass('active');
+    $(this).addClass('active');
+    $('.searchArea .tabContents').removeClass('show').eq(index).addClass('show');
+  });
+});
+$(function() {
+  $('.listArea .tabList').click(function() {
+    var index = $('.listArea .tabList').index(this);
+    $('.listArea .tabList').removeClass('active');
+    $(this).addClass('active');
+    $('.listArea .tabContents').removeClass('show').eq(index).addClass('show');
+  });
+});
+</script> 
+</head>
+
+<body>
+
+<div id="gray_panel" class="gray_panel">
+   </div> 
+   
+	<header id="header">
+		<h1 class="pegeTitle">ユーザー情報</h1>
+                   	  <div class="userArea">
+	    <p>●●●●部　江戸太郎</p>
+	    <p class="btnBlue"><img src="resources/img/icon_logout.png" width="20" height="19" alt=""/></p>
+      </div>
+    </header>
+
+	<nav id="pageNav">
+   	  <div id="hamburger" class="btnBlue pulldownButton"><span class="icon"></span></div>
+        <ul class="pulldownContents">
+            <li class="listItem">サポート情報</li>
+            <li class="listItem">ユーザ情報</li>
+            <li class="listItem">顧客情報</li>
+            <li class="listItem">営業日情報</li>
+<li class="listItem">パスワード変更</li>
+        </ul>
+	</nav>
+
+
+<div class="searchArea">
+
+    	<div class="tabSwitchingArea">
+    	  <div class="tabContents"><!--詳細検索-->
+		    <p class="title bgColor_blue">詳細検索</p>
+            </div>
+        </div>
+
+
+
+  <div class="w100 clearfix pt42">
+
+
+<table class="table_01 fream_gray">
+<tbody>
+<tr class="bgColor_blue">
+	<th colspan="4" class="title">ユーザ情報</th>
+	</tr>
+<tr>
+	<td class="bgColor_lightGray w200px title">氏名 <span class="fcRd">※</span></td>
+	<td colspan="3" class="w1120px"><input type="text" class="inputText w484px" value="江戸　太郎"></td>
+	</tr>
+<tr>
+  <td class="bgColor_lightGray w200px title">氏名（ふりがな） <span class="fcRd">※</span></td>
+  <td colspan="3" class="w1120px"><input type="text" class="inputText w484px" value="えど　たろう"></td>
+  </tr>
+<tr>
+  <td class="bgColor_lightGray w200px title">所属部署 <span class="fcRd">※</span></td>
+  <td colspan="3" class="w1120px">
+  <div class="pulldown flL mt02">
+                        <div class="pulldownButton w154px">東日本一課</div>
+                        <div class="pulldownContents w154px">
+                            <ul>
+                            <li>項目1</li>
+                            <li>項目2</li>
+                            <li>項目3</li>
+                            <li>項目4</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a>
+                    <br>
+
+                    <div class="pulldown flL">
+                        <div class="pulldownButton w154px">営業一課</div>
+                        <div class="pulldownContents w154px">
+                            <ul>
+                            <li>項目1</li>
+                            <li>項目2</li>
+                            <li>項目3</li>
+                            <li>項目4</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a>
+                    
+                    <p class="flR" ><span class="btnBlue w50px">追加</span></p>
+                    </td>
+</tr>
+<tr>
+  <td class="bgColor_lightGray w200px title">担当地域</td>
+  <td colspan="3" class="w1120px"><input type="text" class="inputText w484px" value="東京都板橋区"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a><br>
+<input type="text" class="inputText w484px" value="茨城県水戸市"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a><p class="flR" ><span class="btnBlue w50px">追加</span></p></td>
+</tr>
+<tr>
+  <td class="bgColor_lightGray w200px title">権限 <span class="fcRd">※</span></td>
+  <td colspan="3" class="w1120px"><div class="pulldown">
+                        <div class="pulldownButton w154px">一般ユーザ</div>
+                        <div class="pulldownContents w154px">
+                            <ul>
+                            <li>項目1</li>
+                            <li>項目2</li>
+                            <li>項目3</li>
+                            <li>項目4</li>
+                            </ul>
+                        </div>
+                    </div></td>
+</tr>
+<tr>
+  <td class="bgColor_lightGray w200px title">ログインユーザ名 <span class="fcRd">※</span></td>
+  <td colspan="3" class="w1120px"><input type="text" class="inputText w484px" value="edo"></td>
+</tr>
+<tr>
+  <td class="bgColor_lightGray w200px title">状態 <span class="fcRd">※</span></td>
+  <td colspan="3" class="w1120px"><p>
+    <input name="alert" type="radio" class="radioButton" id="radio01-3" checked>
+    <label for="radio01-3">有効</label>
+    <input type="radio" name="alert" class="radioButton" id="radio01-4">
+    <label for="radio01-4">無</label>
+    <label for="radio01-5">効</label>
+    </p></td>
+</tr>
+<tbody>
+</table>
+
+<table class="table_01 w100 mt20 fream_gray">
+  <tbody>
+    <tr class="bgColor_blue">
+      <th colspan="2" class="title">メール転送設定<p class="flR" ><span class="btnBlue w100px">設定追加</span></p></th>
+    </tr>
+    <tr class="bgColor_blue">
+      <th colspan="2" class="bgColor_lightblue title">設定1<p class="flR"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a></p></th>
+    </tr>
+    <tr>
+      <td class="bgColor_lightGray w200px title">メールアドレス <span class="fcRd">※</span></td>
+      <td class="w1120px"><input type="text" class="inputText w484px" value="edo.edu.co.jp"></td>
+    </tr>
+    <tr>
+      <td class="bgColor_lightGray w200px title">エリア</td>
+      <td class="w1120px"><div class="pulldown">
+                        <div class="pulldownButton w154px">東日本</div>
+                        <div class="pulldownContents w154px">
+                            <ul>
+                            <li>項目1</li>
+                            <li>項目2</li>
+                            <li>項目3</li>
+                            <li>項目4</li>
+                            </ul>
+                        </div>
+                    </div></td>
+    </tr>
+    <tr>
+      <td class="bgColor_lightGray w200px title">地域名</td>
+      <td class="w1120px"><input type="text" class="inputText w484px" value="東京都板橋区"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a><p class="flR" ><span class="btnBlue w50px">追加</span></p></td>
+    </tr>
+    <tr>
+      <td class="bgColor_lightGray w200px title">内容</td>
+      <td class="w1120px"><input type="text" class="inputText w484px" value="出席簿"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a><br>
+      <input type="text" class="inputText w484px" value="特別支援学級"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a><p class="flR" ><span class="btnBlue w50px">追加</span></p></td>
+    </tr>
+    <tr>
+      <td class="bgColor_lightGray w200px title">対応予定者</td>
+      <td class="w1120px">
+<input type="text" class="inputText w484px" value="江戸太郎"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a><p class="flR" ><span class="btnBlue w50px">追加</span></p></td>
+    </tr>
+    <tbody>
+  </table>
+  </div>
+
+     <div class="clearfix blockC pt20">
+<ul>
+      <li class="btnBlue2 taC w121px">保存</li>
+              <li class="btnGray taC w121px ml20">キャンセル</li>
+    </ul>
+       </div>
+       
+    <!-- /.searchArea --></div>
+    
+    <div id="alert_over" class="alertMes_center Mes_warning ">
+  <p>選択した内容を削除しますか？</p>
+  <div class="clearfix blockC pt20">
+    <ul>
+      <li class="btnBlue taC w121px">はい</li>
+      <li class="btnGray_Cancel taC w121px ml20">いいえ</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

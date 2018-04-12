@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>25サポート情報</title>
+<link rel="stylesheet" type="text/css" href="resources/css/cmn_style.css">
+<link rel="stylesheet" type="text/css" href="resources/css/cmn_layout.css">
+<link rel="stylesheet" type="text/css" href="resources/css/alert.css">
+<script type="text/javascript" src="resources/js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="resources/js/common.js"></script>
+<script type="text/javascript" language="javascript" src="resources/js/fixed_midashi.js"></script>
+<script>
+window.onload = function()
+{
+    FixedMidashi.create();
+};
+$(document).ready(function(){
+    $('.pulldownButton').click(function(){
+        $(this).next('.pulldownContents').stop(true, true).slideToggle();
+		$(this).toggleClass("active");
+    });
+});
+$(function() {
+  $('.searchArea .tabList').click(function() {
+    var index = $('.searchArea .tabList').index(this);
+    $('.searchArea .tabList').removeClass('active');
+    $(this).addClass('active');
+    $('.searchArea .tabContents').removeClass('show').eq(index).addClass('show');
+  });
+});
+$(function() {
+  $('.listArea .tabList').click(function() {
+    var index = $('.listArea .tabList').index(this);
+    $('.listArea .tabList').removeClass('active');
+    $(this).addClass('active');
+    $('.listArea .tabContents').removeClass('show').eq(index).addClass('show');
+  });
+});
+</script> 
+
+<script type="text/javascript"><!--
+function HideCBox( boxid ) {
+   var target = document.getElementById(boxid);
+   if( target.style.display != "none" ) {
+      target.style.display = "none";
+   }
+   else {
+      target.style.display = "";
+   }
+}
+// --></script>
+<!--&#91;if lt IE 7&#93;>
+<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></script>
+<!&#91;endif&#93;-->
+</head>
+
+<body class="bgColor_gray">
+	
+
+
+        	
+
+            	<div class="cardArea widthFull">
+
+        
+        <div class="contentsArea">
+        
+            <div class="scrollArea clear">
+            <div class="callNo title bgColor_blueGray clearfix ptb02">
+                        	<p class="flL">入電No.21375<span class="fcRd">未完了</span></p>
+                
+                
+                
+                <div class="flR mr05">
+            	 <p class="flL">入電日時<span class="fcRd ml05">※</span>：<input type="text" class="inputText" value="2017/01/15" size="10"><a href="./"><img src="resources/img/icon_calender.png" class="icon calender ml05" /></a></p>
+                 <div class="pulldown flL">
+                        <div class="pulldownButton bg_white w50px"><input type="text" class="Border_0 ml05" value="16" size="2"></div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>6</li>
+                            <li>12</li>
+                            <li>18</li>
+                            </ul>
+                          </div>
+                      </div>
+                       <p class="flL">：</p>
+                      <div class="pulldown flL">
+                        <div class="pulldownButton bg_white w50px"><input type="text" class="Border_0 ml05" value="30" size="2"></div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>00</li>
+                            <li>15</li>
+                            <li>30</li>
+                            <li>45</li>
+                            </ul>
+                          </div>
+                      </div>
+                 
+                 
+                 <p class="flL ml20"><span class="addButton taR ml05"><span class="btnBlue">セット</span></span></p>
+                 </div>
+                 
+                 
+                 
+                 
+                 
+            </div>
+            	<div class="contentsList fcBk">
+                    <p class="flL">地域名<span class="fcRd ml05">※</span>：<input type="text" class="inputText" value="茨城県水戸市" size="10"></p>
+                    <p class="flL ml20">学校名<span class="fcRd ml05">※</span>：<input type="text" class="inputText" value="緑岡小学校" size="10"></p>
+                      <p class="flL ml20 mt05">受付区分：</p>
+                      <div class="pulldown flL">
+                        <div class="pulldownButton w100px pt05">入電</div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>項目1</li>
+                            <li>項目2</li>
+                            <li>項目3</li>
+                            <li>項目4</li>
+                            </ul>
+                          </div>
+                      </div>
+                      
+                  <p class="flL ml20">依頼者<span class="fcRd ml05">※</span>：<input type="text" class="inputText" value="コオリヤマ" size="10"></p>
+                    <p class="flL ml20 mt05">役職：</p>
+                     <div class="pulldown flL">
+                        <div class="pulldownButton w100px pt05">校長</div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>項目1</li>
+                            <li>項目2</li>
+                            <li>項目3</li>
+                            <li>項目4</li>
+                            </ul>
+                          </div>
+                      </div>
+                    
+                    <p class="flL ml20 mr05">記入者<span class="fcRd ml05">※</span>：<input type="text" class="inputText" value="高田花子" size="10"></p>
+                     <div class="pulldown flL">
+                        <div class="pulldownButton w100px pt05">先生</div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>様</li>
+                            <li>先生</li>
+                            </ul>
+                          </div>
+                      </div>
+                      
+                    <p class="flL ml20">対応予定者：<input type="text" class="inputText" value="高田花子" size="10"></p>
+                    <div class="clear"></div>
+                    <p><span class="vaT flL">備考：</span> <textarea cols="30" rows="2" class="TextBox mt05"></textarea></p>
+                    
+                </div>
+                
+                
+                <!-- questionArea -->
+                <div class="questionArea clear">
+               	  <div class="title bgColor_blue clearfix ptb02">
+                    <p class="flL">質問1</p>
+                    
+                    <div class="flR mr05">
+                      <p class="flL">質問受付日時<span class="fcRd ml05">※</span>：
+<input type="text" class="inputText" value="2017/01/15" size="10"><a href="./"><img src="resources/img/icon_calender.png" class="icon calender ml05" /></a></p>
+                 <div class="pulldown flL">
+                   <div class="pulldownButton bg_white w50px"><input type="text" class="Border_0 ml05" value="16" size="2"></div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>6</li>
+                            <li>12</li>
+                            <li>18</li>
+                          </ul>
+                   </div>
+                      </div>
+                       <p class="flL">：</p>
+                      <div class="pulldown flL">
+                        <div class="pulldownButton bg_white w50px"><input type="text" class="Border_0 ml05" value="30" size="2"></div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>00</li>
+                            <li>15</li>
+                            <li>30</li>
+                            <li>45</li>
+                          </ul>
+                        </div>
+                      </div>
+                 
+                 
+                 <p class="flL ml20"><span class="addButton taR ml05"><span class="btnBlue">セット</span></span></p>
+                 <p class="flL ml20"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a></p>
+                       </div>
+                       
+                    </div>
+                    <div class="contentsList clear">
+                        <p class="flL">対応区分：</p>
+                        <div class="pulldown flL">
+                        <div class="pulldownButton w150px pt05">ヘルプデスク</div>
+                        <div class="pulldownContents w100px">
+                          <ul>
+                            <li>項目1</li>
+                            <li>項目2</li>
+                            <li>項目3</li>
+                            <li>項目4</li>
+                            </ul>
+                          </div>
+                      </div>
+</div>
+                        <p class="title w92px flL">分類<span class="fcRd ml05">※</span>：</p>
+	         <div class="noBorder">
+            <p class="flL">
+            <input type="text" class="inputText w121px">
+             </p>
+
+	         <div class="pulldown flL ml05 mr05">
+	          <div class="pulldownButton pull_checkBox w26px"></div>
+	          <div class="pulldownContents w121px">
+	            <ul>
+	                <li><a href="#" class="arw">1.C4th</a>
+	                  <ul>
+	                    <li><a href="#">1-1.</a></li>
+	                    <li><a href="#" class="arw">1-2.</a>
+	                      <ul>
+	                        <li><a href="#">1-2-1.</a></li>
+	                        <li><a href="#">1-2-2.</a></li>
+	                        <li><a href="#">1-2-3.</a></li>
+	                        <li><a href="#">1-2-4.</a></li>
+	                        <li><a href="#">1-2-5.</a></li>
+	                        <li><a href="#">1-2-6.</a></li>
+	                        <li><a href="#">1-2-7.</a></li>
+	                        <li><a href="#">1-2-8.</a></li>
+	                        <li><a href="#">1-2-9.</a></li>
+	                        <li><a href="#">1-2-10.</a></li>
+	                        <li><a href="#">1-2-11.</a></li>
+	                        <li><a href="#">1-2-12.</a></li>
+	                        <li><a href="#">1-2-14.</a></li>
+                          </ul>
+                        </li>
+	                    <li><a href="#">1-3.</a></li>
+	                    <li><a href="#">1-4.</a></li>
+	                    <li><a href="#">1-5.</a></li>
+	                    <li><a href="#">1-6.</a></li>
+                      </ul>
+                    </li>
+	                <li><a href="#">2.SWA</a></li>
+	                <li><a href="#">3.</a></li>
+	                <li><a href="#">4.</a></li>
+	                <li><a href="#">5.</a></li>
+	                <li><a href="#">6.</a></li>
+	                <li><a href="#">7.</a></li>
+	                <li><a href="#">8.</a></li>
+	                <li><a href="#">9.</a></li>
+	                <li><a href="#" class="arw">10.</a>
+                     <ul>
+	                    <li><a href="#">1-1.</a></li>
+	                    <li><a href="#" class="arw">1-2.</a>
+	                      <ul>
+	                        <li><a href="#">1-2-1.</a></li>
+	                        <li><a href="#">1-2-2.</a></li>
+	                        <li><a href="#">1-2-3.</a></li>
+	                        <li><a href="#">1-2-4.</a></li>
+	                        <li><a href="#">1-2-5.</a></li>
+	                        <li><a href="#">1-2-6.</a></li>
+	                        <li><a href="#">1-2-7.</a></li>
+	                        <li><a href="#">1-2-8.</a></li>
+	                        <li><a href="#">1-2-9.</a></li>
+	                        <li><a href="#">1-2-10.</a></li>
+	                        <li><a href="#">1-2-11.</a></li>
+	                        <li><a href="#">1-2-12.</a></li>
+	                        <li><a href="#">1-2-14.</a></li>
+                          </ul>
+                        </li>
+	                    <li><a href="#">1-3.</a></li>
+	                    <li><a href="#">1-4.</a></li>
+	                    <li><a href="#">1-5.</a></li>
+	                    <li><a href="#">1-6.</a></li>
+                      </ul></li>
+	                <li><a href="#">11.</a></li>
+	                <li><a href="#">12.</a></li>
+	                <li><a href="#">13.</a></li>
+	                <li><a href="#">14.</a></li>
+	                <li><a href="#">15.</a></li>
+	                <li><a href="#">16.</a></li>
+	                <li><a href="#">17.</a></li>
+	                <li><a href="#">18.</a></li>
+                  </ul>
+              </div>
+              
+            </div> 
+
+<div class="mr05 flL mt05">校務スケジュール＞学校日誌</div>
+            </div>
+            
+                        <p class="flL ml20">対応予定日：<input type="text" class="inputText" value="" size="10"><a href="./"><img src="resources/img/icon_calender.png" class="icon calender ml05" /></a></p>
+                        <p class="flL ml20">対応予定者<span class="fcRd ml05">※</span>：<input type="text" class="inputText" value="" size="10"></p>
+                        <div class="clear"></div>
+                        <p><span class="vaT flL">質問内容<span class="fcRd ml05">※</span>：</span><textarea cols="100" rows="2" class="TextBox mt05"></textarea></p>
+                        <p><span class="vaT flL">要望　　：</span><textarea cols="100" rows="2" class="TextBox mt05"></textarea></p>
+
+
+                    <div class="clear"></div>
+
+                	<div class=" clearfix contentsList addButton">
+                      <p class="flL">対応1</p>
+                        <p class="flR"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a></p>
+                        <div class="clear"></div>
+                        <p><span class="vaT flL">対応内容<span class="fcRd ml05">※</span>：</span><textarea cols="100" rows="2" class="TextBox mb05"></textarea></p>
+                       
+                       <div class="mt05">
+                      <p class="flL">対応日時<span class="fcRd ml05">※</span>：<input type="text" class="inputText" value="2017/01/15" size="10"><a href="./"><img src="resources/img/icon_calender.png" class="icon calender ml05" /></a></p>
+                       
+                        <div class="pulldown flL">
+                        <div class="pulldownButton w50px pt05"><input type="text" class="Border_0 ml05 bgColor_blueGray" value="16" size="2"></div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>6</li>
+                            <li>12</li>
+                            <li>18</li>
+                          </ul>
+                   </div>
+                      </div>
+                       <p class="flL">：</p>
+                      <div class="pulldown flL">
+                        <div class="pulldownButton w50px pt05"><input type="text" class="Border_0 ml05 bgColor_blueGray" value="30" size="2"></div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>00</li>
+                            <li>15</li>
+                            <li>30</li>
+                            <li>45</li>
+                          </ul>
+                        </div>
+                      </div>
+                 
+                 </div>
+                 
+                 <p class="flL ml20"><span class="addButton taR ml05"><span class="btnBlue">セット</span></span></p>
+                        <p class="flL ml20">対応者：<input type="text" class="inputText" value="高田花子" size="10"></p>
+                        <p class="flL ml20 mt05">対応状態：</p>
+                         <div class="pulldown flL">
+                        <div class="pulldownButton w100px pt05">未対応</div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>項目1</li>
+                            <li>項目2</li>
+                            <li>項目3</li>
+                            <li>項目4</li>
+                          </ul>
+                          </div>
+                      </div> 
+                      </div>
+
+<div class=" clearfix contentsList addButton">
+                      <p class="taR"><span class="btnBlue">追加</span></p> 
+                      </div>
+                  
+                    <div class="clear"></div>
+
+                </div>
+                <!-- questionArea -->
+                
+                <!-- questionArea -->
+                <div class="questionArea clear mt10">
+               	  <div class="title bgColor_blue clearfix ptb02">
+                    <p class="flL">質問2</p>
+                    
+                    <div class="flR mr05">
+                      <p class="flL">質問受付日時<span class="fcRd ml05">※</span>：<input type="text" class="inputText" value="2017/01/15" size="10"><a href="./"><img src="resources/img/icon_calender.png" class="icon calender ml05" /></a></p>
+                 <div class="pulldown flL">
+                        <div class="pulldownButton bg_white w50px"><input type="text" class="Border_0 ml05" value="16" size="2"></div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>6</li>
+                            <li>12</li>
+                            <li>18</li>
+                          </ul>
+                   </div>
+                      </div>
+                       <p class="flL">：</p>
+                      <div class="pulldown flL">
+                        <div class="pulldownButton bg_white w50px"><input type="text" class="Border_0 ml05" value="30" size="2"></div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>00</li>
+                            <li>15</li>
+                            <li>30</li>
+                            <li>45</li>
+                          </ul>
+                        </div>
+                      </div>
+                 
+                 
+                 <p class="flL ml20"><span class="addButton taR ml05"><span class="btnBlue">セット</span></span></p>
+                 <p class="flL ml20"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a></p>
+                       </div>
+                       
+                    </div>
+                    <div class="contentsList clear">
+                        <p class="flL mt05">対応区分：</p>
+                        <div class="pulldown flL">
+                        <div class="pulldownButton w150px pt05">ヘルプデスク</div>
+                        <div class="pulldownContents w100px">
+                          <ul>
+                            <li>項目1</li>
+                            <li>項目2</li>
+                            <li>項目3</li>
+                            <li>項目4</li>
+                            </ul>
+                          </div>
+                      </div>
+</div>
+                        <p class="title w92px flL">分類<span class="fcRd ml05">※</span>：</p>
+	         <div class="noBorder">
+            <p class="flL">
+            <input type="text" class="inputText w121px">
+             </p>
+
+	         <div class="pulldown flL ml05 mr05">
+	          <div class="pulldownButton pull_checkBox w26px"></div>
+	          <div class="pulldownContents w121px">
+	            <ul>
+	                <li><a href="#" class="arw">1.C4th</a>
+	                  <ul>
+	                    <li><a href="#">1-1.</a></li>
+	                    <li><a href="#" class="arw">1-2.</a>
+	                      <ul>
+	                        <li><a href="#">1-2-1.</a></li>
+	                        <li><a href="#">1-2-2.</a></li>
+	                        <li><a href="#">1-2-3.</a></li>
+	                        <li><a href="#">1-2-4.</a></li>
+	                        <li><a href="#">1-2-5.</a></li>
+	                        <li><a href="#">1-2-6.</a></li>
+	                        <li><a href="#">1-2-7.</a></li>
+	                        <li><a href="#">1-2-8.</a></li>
+	                        <li><a href="#">1-2-9.</a></li>
+	                        <li><a href="#">1-2-10.</a></li>
+	                        <li><a href="#">1-2-11.</a></li>
+	                        <li><a href="#">1-2-12.</a></li>
+	                        <li><a href="#">1-2-14.</a></li>
+                          </ul>
+                        </li>
+	                    <li><a href="#">1-3.</a></li>
+	                    <li><a href="#">1-4.</a></li>
+	                    <li><a href="#">1-5.</a></li>
+	                    <li><a href="#">1-6.</a></li>
+                      </ul>
+                    </li>
+	                <li><a href="#">2.SWA</a></li>
+	                <li><a href="#">3.</a></li>
+	                <li><a href="#">4.</a></li>
+	                <li><a href="#">5.</a></li>
+	                <li><a href="#">6.</a></li>
+	                <li><a href="#">7.</a></li>
+	                <li><a href="#">8.</a></li>
+	                <li><a href="#">9.</a></li>
+	                <li><a href="#" class="arw">10.</a>
+                     <ul>
+	                    <li><a href="#">1-1.</a></li>
+	                    <li><a href="#" class="arw">1-2.</a>
+	                      <ul>
+	                        <li><a href="#">1-2-1.</a></li>
+	                        <li><a href="#">1-2-2.</a></li>
+	                        <li><a href="#">1-2-3.</a></li>
+	                        <li><a href="#">1-2-4.</a></li>
+	                        <li><a href="#">1-2-5.</a></li>
+	                        <li><a href="#">1-2-6.</a></li>
+	                        <li><a href="#">1-2-7.</a></li>
+	                        <li><a href="#">1-2-8.</a></li>
+	                        <li><a href="#">1-2-9.</a></li>
+	                        <li><a href="#">1-2-10.</a></li>
+	                        <li><a href="#">1-2-11.</a></li>
+	                        <li><a href="#">1-2-12.</a></li>
+	                        <li><a href="#">1-2-14.</a></li>
+                          </ul>
+                        </li>
+	                    <li><a href="#">1-3.</a></li>
+	                    <li><a href="#">1-4.</a></li>
+	                    <li><a href="#">1-5.</a></li>
+	                    <li><a href="#">1-6.</a></li>
+                      </ul></li>
+	                <li><a href="#">11.</a></li>
+	                <li><a href="#">12.</a></li>
+	                <li><a href="#">13.</a></li>
+	                <li><a href="#">14.</a></li>
+	                <li><a href="#">15.</a></li>
+	                <li><a href="#">16.</a></li>
+	                <li><a href="#">17.</a></li>
+	                <li><a href="#">18.</a></li>
+                  </ul>
+              </div>
+              
+            </div> 
+
+<div class="mr05 flL mt05">校務スケジュール＞学校日誌</div>
+            </div>
+            
+                        <p class="flL ml20">対応予定日：<input type="text" class="inputText" value="" size="10"><a href="./"><img src="resources/img/icon_calender.png" class="icon calender ml05" /></a></p>
+                        <p class="flL ml20">対応予定者<span class="fcRd ml05">※</span>：<input type="text" class="inputText" value="" size="10"></p>
+                        <div class="clear"></div>
+                        <p><span class="vaT flL">質問内容<span class="fcRd ml05">※</span>：</span><textarea cols="100" rows="2" class="TextBox mt05"></textarea></p>
+                        <p><span class="vaT flL">要望　　：</span><textarea cols="100" rows="2" class="TextBox mt05"></textarea></p>
+
+
+                    <div class="clear"></div>
+
+                	<div class=" clearfix contentsList addButton">
+                      <p class="flL">対応1</p>
+                        <p class="flR"><a href="#"><img src="resources/img/icon_close.png" width="19" height="19" class="icon calender"></a></p>
+                        <div class="clear"></div>
+                        <p><span class="vaT flL">対応内容<span class="fcRd ml05">※</span>：</span><textarea cols="100" rows="2" class="TextBox mb05"></textarea></p>
+                       
+                       <div class="mt05">
+                      <p class="flL">対応日時<span class="fcRd ml05">※</span>：<input type="text" class="inputText" value="2017/01/15" size="10"><a href="./"><img src="resources/img/icon_calender.png" class="icon calender ml05" /></a></p>
+                       
+                        <div class="pulldown flL">
+                        <div class="pulldownButton w50px pt05"><input type="text" class="Border_0 ml05 bgColor_blueGray" value="16" size="2"></div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>6</li>
+                            <li>12</li>
+                            <li>18</li>
+                          </ul>
+                   </div>
+                      </div>
+                       <p class="flL">：</p>
+                      <div class="pulldown flL">
+                        <div class="pulldownButton w50px pt05"><input type="text" class="Border_0 ml05 bgColor_blueGray" value="30" size="2"></div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>00</li>
+                            <li>15</li>
+                            <li>30</li>
+                            <li>45</li>
+                          </ul>
+                        </div>
+                      </div>
+                 
+                 
+                 <p class="flL ml20"><span class="addButton taR ml05"><span class="btnBlue">セット</span></span></p>
+                        <p class="flL ml20">対応者：<input type="text" class="inputText" value="高田花子" size="10"></p>
+                        <p class="flL ml20 mt05">対応状態：</p>
+                         <div class="pulldown flL">
+                        <div class="pulldownButton w100px pt05">未対応</div>
+                        <div class="pulldownContents">
+                          <ul>
+                            <li>項目1</li>
+                            <li>項目2</li>
+                            <li>項目3</li>
+                            <li>項目4</li>
+                          </ul>
+                          </div>
+                      </div> 
+                      </div>
+                      
+                      </div>
+
+<div class=" clearfix contentsList addButton">
+                      <p class="taR"><span class="btnBlue">追加</span></p> 
+                      </div>
+                  
+                    <div class="clear"></div>
+
+                </div>
+                <!-- questionArea -->
+                
+                
+                <p class="addQuestionButton taR mr10"><span class="btnBlue">質問追加</span></p>
+             </div>
+             
+   
+
+            
+
+
+
+<div class="alertMes_underCell Mes_error">
+	<p>***を入力してください。</p>
+    <p><a href="#" class="btn_close">×</a></p>
+</div>
+
+<div class="alertMes_underCell Mes_warning">
+	<p>顧客情報にご登録されていません</p>
+    <p><a href="#" class="btn_close">×</a></p>
+</div>
+
+<div class="alertMes_underCell Mes_information">
+	<p>***を入力してください。</p>
+    <p><a href="#" class="btn_close">×</a></p>
+</div>
+
+
+</div>
+</div>
+
+</body>
+</html>

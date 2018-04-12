@@ -1,0 +1,891 @@
+﻿@charset "UTF-8";
+/*
+ * cmn_layout.css
+ *
+ */
+
+/* !HTML5 elements
+---------------------------------------------------------- */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* !Reseting
+---------------------------------------------------------- */
+body {
+  overflow: auto;
+  background-color: #fff;
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Helvetica, Verdana, sans-serif;
+  font-size: 15pt;
+  line-height: 1.5em;
+  color: #333;
+}
+body, div, pre, p, blockquote, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, th, td, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+input, textarea {
+	margin: 0px;
+	font-size: 1em;
+	background-color: #fff;
+}
+label {
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+}
+fieldset, img {
+  border: 0;
+}
+img {
+  vertical-align: top;
+}
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol, ul {
+  list-style: none;
+}
+caption, th {
+  text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  font-weight: normal;
+}
+q:after, q:before {
+  content:'';
+}
+a, input {
+  outline: none;
+}
+input, textarea {
+  border-radius: 0;
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Helvetica, Verdana, sans-serif;
+}
+input[type="button"],input[type="submit"]  {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+abbr, acronym {
+  border: 0;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* !Clearfix
+---------------------------------------------------------- */
+.clearfix {
+  display: block;
+  min-height: 1%;
+}
+.clearfix:after {
+  clear: both;
+  content:"";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+* html .clearfix {
+  height: 1%;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+html,body {
+  height: 100%;
+}
+
+/* !header
+---------------------------------------------------------- */
+#header {
+  width: 100%;
+  height: 2.5em;
+  padding-left: 3em;
+  background: url(../img/header_logo.png) no-repeat right top #0f65a6;
+  color: #FFF;
+}
+#header .pegeTitle {
+  font-size: 1.3em;
+  line-height: 1.9em;
+}
+#hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2.5em;
+  height: 2.5em;
+}
+	#hamburger.btnBlue:hover{
+		background: #15349e;
+	}
+	#pageNav .pulldownButton .icon {
+	  position: absolute;
+	  top: 0.8em;
+	  left: 0.55em;
+	  width: 1.4em;
+	  height: 2px;
+	  background-color: #fff;
+	  color: #fff;
+	}
+	#pageNav .pulldownButton .icon:before {
+	  content: '';
+	  position: absolute;
+	  top: 0.8em;
+	  left: 0;
+	  width: 1.4em;
+	  height: 2px;
+	  background-color: #fff;
+	}
+	#pageNav .pulldownButton .icon:after {
+	  content: '';
+	  position: absolute;
+	  top: 0.4em;
+	  left: 0;
+	  width: 1.4em;
+	  height: 2px;
+	  background-color: #fff;
+	}
+	#pageNav .pulldownButton.active .icon {
+	  position: absolute;
+	  top: 0.6em;
+	  height: 1.4em;
+	  background-color: #15349e;
+	  color:  #fff;
+	}
+	#pageNav .pulldownButton.active .icon:before {
+	  content: '';
+	  position: absolute;
+	  top: 0.5em;
+	  background-color: #fff;
+	  -webkit-transform: rotate(-45deg);
+			  transform: rotate(-45deg);
+	}
+	#pageNav .pulldownButton.active .icon:after {
+	  content: '';
+	  position: absolute;
+	  top: 0.5em;
+	  background-color: #fff;
+	  -webkit-transform: rotate(45deg);
+			  transform: rotate(45deg);
+	}
+#pageNav .pulldownContents{
+	z-index: 1000;
+	width: 8.5em;
+	padding-left: 0.5em;
+	background-color: #000;
+}
+#pageNav .listItem{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	padding-left: 0.5em;
+	border-bottom: 1px solid #999;
+	color: #fff;
+	font-size: 0.8em;
+	line-height: 2.2em;
+	cursor: pointer;
+}
+#pageNav .listItem:hover{
+	background-color: #666;
+	color: #fff;
+}
+	#pageNav .listItem::before{
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0.5em;
+		width: 0.5em;
+		height: 0.5em;
+		margin-top: -0.25em;
+		border-top: 2px solid #999;
+		border-right: 2px solid #999;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+/*　検索エリア　*****************************************************/
+.searchArea{
+	position: relative;
+	margin: 0 auto;
+	width: 66em;
+}
+.userArea{
+	position: absolute;
+	top: 0.5em;
+	right: 34em;
+	margin-top: 0.3em;
+	padding-top: 0.1em;
+	padding-right: 4em;
+	padding-left: 1em;
+	padding-bottom: 0.1em;
+	width: 40em;
+	height: 2.4em;
+	font-size: 0.6em;
+	text-align: right;
+}
+.userArea .btnBlue{
+	position: absolute;
+	top: 0em;
+	right: 0em;
+	width: 2.5em;
+	height:2.5em;
+	padding-top:0.5em;
+	padding-left:0.1em;
+	}
+	
+.searchArea .tabList {
+	margin-top: 0.8em;
+	width: 10em;
+	line-height: 2.14em;
+}
+.searchArea .tabContents {
+	font-size: 0.55em;
+	line-height: 2.3em;
+	border: 1px solid #ccc;
+}
+
+.searchTableLine{
+
+}
+.searchTableLine.top{
+	border-top: 1px solid #ccc;
+}
+.searchTableLine > *{
+	float: left;
+	padding: 2px;
+	border-left: 1px solid #ccc;
+	vertical-align: middle;
+}
+
+.searchTableLine.noBorder_l{
+	border:none;
+}
+
+.searchTableLine > *:first-child,
+.searchTableLine.noBorder > *{
+	border-left: 0;
+}
+
+.noConditions{
+	position: relative;
+	display: block;
+	padding: 0 0.5em;
+	float: right;
+	font-size: 1.27em;
+	line-height: 1.9em;
+}
+	.noConditions:before {
+	  content: "";
+	  position: absolute;
+	  top: 50%;
+	  left: -1.3em;
+	  margin-top: -0.7em;
+	  width: 1.3em;
+	  height: 1.3em;
+	  border-radius: 50%;
+	  background: #15349e;
+	}
+	.noConditions:after {
+	  content: "";
+	  position: absolute;
+	  top: 50%;
+	  left: -0.8em;
+	  margin-top: -0.3em;
+	  border-style: solid;
+	  border-width: 0 0.2em 0.35em 0.2em;
+	  border-color: transparent transparent #fff transparent;
+	}
+ .inputText{
+	padding-left: 0.3em;
+	height: 2.3em;
+	background: #FFF;
+	border: 1px solid #ccc;
+}
+
+.pulldown .pulldownButton {
+	position: relative;
+  height: 2.24em;
+  padding-left: 2em;
+  background: #e7e9f5;
+  border-radius: 3px;
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pulldown .pulldownButton.bg_white {
+  background: #fff;
+}
+	.pulldown .pulldownButton::before {
+	  content: "";
+	  position: absolute;
+	  top: 50%;
+	  left: 0.35em;
+	  margin-top: -0.83em;
+	  width: 1.66em;
+	  height: 1.66em;
+	  border-radius: 3px;
+	  background: #15349e;
+	}
+	.pulldown .pulldownButton::after {
+	  content: "";
+	  position: absolute;
+	  top: 50%;
+	  left: 0.95em;
+	  margin-top: -0.2em;
+	  border-style: solid;
+	  border-width: 0.4em 0.2em 0 0.2em;
+	  border-color: #fff transparent transparent transparent;
+	}
+	.pulldown .pulldownButton.active::after {
+	  border-width: 0 0.2em 0.4em 0.2em;
+	  border-color: transparent transparent #fff transparent;
+	}
+
+	  
+.pulldown .pull_checkBox {
+	  border: 0;
+	  background-image:url(../img/arw_off.png);
+	  background-repeat:no-repeat;
+	  background-position:left;
+	  	background-position:3px;
+	}
+	.pulldown .pull_checkBox.active {
+	  border: 0;
+	  background-image:url(../img/arw_on.png);
+	  background-repeat:no-repeat;
+	  background-position:left;
+	  	background-position:3px;
+	}
+
+	.pulldown .pull_checkBox:before {content:none;}
+	.pulldown .pull_checkBox:after {content:none;}
+	
+.pulldown .pulldownContents {
+	z-index: 999;
+  display: none;
+  left: 0;
+  top: 2.36em;
+  padding: 0.7em;
+  background: #eee;
+  box-shadow: 0.1em 0.1em 0.3em #bbb;
+}
+.searchArea .title{
+	padding-left: 0.6em;
+}
+.searchArea  img.icon.calender{
+	margin: 0 0.5em;
+	}
+.searchArea .radioButton{
+	margin: 0 0.3em 0 2em;
+}
+.searchArea .radioButton:first-child{
+	margin-left: 0.5em;
+}
+.searchArea .territoryTxt{
+	margin: 0 3em 0 1em;
+}
+.searchArea .keywordsTxt{
+	margin-left: 4em;
+}
+.searchArea .w92px{
+	width: 8.36em;
+}
+.searchArea .w103px{
+	width: 9.36em;
+}
+.w121px{
+	width: 11em;
+}
+.searchArea .w154px{
+	width: 14em;
+}
+.searchArea .w172px{
+	width: 15.64em;
+}
+.searchArea .w192px{
+	width: 17.5em;
+}
+.searchArea .w286px{
+	width: 26em;
+}
+.searchArea .w300px{
+	width: 28em;
+}
+.searchArea .w484px{
+	width: 44em;
+}
+.searchTableLine .btnBlue{
+	float: right;
+	margin: 2px 2px 0 0;
+	width: 12em;
+	font-size: 1.27em;
+	line-height: 1.55em;
+}
+
+/*　表示エリア　*****************************************************/
+.wrapperWrap{
+	margin-top: 0.5em;
+	padding: 0 1em;
+	width: 100%;
+	border-top: 2px solid #03b186;
+}
+/*　一覧エリア　*****************************************************/
+.listArea,
+.cardArea{
+	width: 48.1%;
+}
+.cardArea .contentsArea,
+.listArea .tabContents{
+	position: relative;
+	height: 19.25em;
+	padding-top: 0.5em;
+	padding-right: 0;
+	padding-left: 0.5em;
+}
+.listArea .tabContents2{
+	position: relative;
+	height: 19.25em;
+	padding-top: 0.5em;
+	padding-right: 0;
+	padding-left: 0.5em;
+}
+.listArea .tabContents{
+	border-right: 0px;
+	padding:0px;}
+.listArea .scrollArea{
+	width: 100%;
+	height: 97%;
+	overflow: auto;
+	background-color: #fff;
+	font-size: 0.55em;
+	line-height: 2.3em;
+}
+.listArea .scrollArea.w101{
+	width: 101%;
+}
+	.listArea .tabContents::before,
+	.cardArea .contentsArea::before{
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: -0.65em;
+		margin-top: -9.1em;
+		width: 0.65em;
+		height: 18.2em;
+		background: #ccc;
+		border-radius: 0 0.3em 0.3em 0;
+		cursor: pointer;
+	}
+	.listArea .tabContents::after{
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: -0.55em;
+		margin-top: -0.2em;
+		border-style: solid;
+		border-width: 0.2em 0 0.2em 0.35em;
+		border-color: transparent transparent transparent #15349e;
+		cursor: pointer;
+	}
+
+	.listArea.widthFull .tabContents::after{
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: -0.5em;
+		margin-top: -0.2em;
+		border-style: solid;
+		border-width: 0.2em 0.35em 0.2em 0;
+		border-color: transparent #15349e transparent transparent;
+		cursor: pointer;
+	}
+	
+	
+	.cardArea.widthFull .contentsArea::after{
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: -0.5em;
+		margin-top: -0.2em;
+		border-style: solid;
+		border-width: 0.2em 0 0.2em 0.35em;
+		border-color: transparent transparent transparent #15349e;
+		cursor: pointer;
+	}
+.listArea .tabList{
+	margin-top: 0.71em;
+	width: 11.1em;
+	line-height: 2.5em;
+}
+
+.scrollArea table{
+	width: 100%;
+
+}
+.scrollArea th{
+	padding: 0 0.3em;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.scrollArea th.Border_r_g{
+	border-right: 1px solid #ccc;
+}
+
+.scrollArea td{
+	padding: 0 0.3em;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.scrollArea tr td:last-child{
+	border-right: 0;
+}
+.scrollArea tr:nth-child(2n+1) td{
+	background-color: #f6f6f6;
+}
+.scrollArea tr.bgColor_yellow:nth-child(2n+1) td,
+.scrollArea tr:nth-child(2n+1) td.bgColor_yellow{
+	background-color: #ffff00;
+}
+.everyCall th,
+.everyCall td{
+	white-space: nowrap;
+}
+.everyCall .col1{	width: 7%;}
+.everyCall .col2{	width: 18%;}
+.everyCall .col3{	width: 15%;}
+.everyCall .col4{	width: 13%;}
+.everyCall .col5{	width: 15%;}
+.everyCall .col6{	width: 11%;}
+.everyCall .col7{	width: 11%;}
+.everyCall .col8{	width: 10%;}
+.everyQuestion .scrollArea td{
+	padding: 0.3em;
+	line-height: 1.5em;
+}
+.everyQuestion .col1{	width: 14%;}
+.everyQuestion .col2{	width: 8%;}
+.everyQuestion .col3{	width: 12%;}
+.everyQuestion .col4{	width: 12%;}
+.everyQuestion .col5{	width: 46%;}
+.everyQuestion .col8{	width: 8%;}
+
+/*　一覧エリア　フル表示　*/
+.widthFull .everyQuestion .col1{	width: 10%;}
+.widthFull .everyQuestion .col2{	width: 8%;}
+.widthFull .everyQuestion .col3{	width: 14%;}
+.widthFull .everyQuestion .col4{	width: 8%;}
+.widthFull .everyQuestion .col5{	width: 36%;}
+.widthFull .everyQuestion .col6{	width: 8%;}
+.widthFull .everyQuestion .col7{	width: 10%;}
+.widthFull .everyQuestion .col8{	width: 6%;}
+
+.cardArea.widthFull{
+	width: 99%;
+}
+
+.listArea.widthFull{
+	width: 99%;
+}
+.listArea.widthFull .pulldown {
+	float: right;
+	font-size: 0.55em;
+}
+.listArea.widthFull .everyQuestion .col5{
+	padding: 0.5em 0.3em;
+}
+
+.listArea.widthFull .pulldown .pulldownButton {
+  height: 2.82em;
+  margin-top: 0.5em;
+  padding: 0 0.5em 0 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+	.listArea.widthFull .pulldown .pulldownButton::before {
+	  left: 0.35em;
+	  margin-top: -1em;
+	  width: 1.66em;
+	  height: 2.1em;
+	}
+.listArea.widthFull .pulldown .pulldownContents {
+  left: 100%;
+  top: 2.6em;
+  margin-left: -10.6em;
+  width: 10.6em;
+  padding: 0.7em 0 0.7em 2.4em;
+  background: #000;
+  box-shadow: 0;
+  color: #fff;
+  font-size: 1.27em;
+}
+.listArea.widthFull .checkRespond{
+	position:relative;
+	margin: 0.5em 0;
+	padding: 0 0.5em 0 2em;
+}
+	.listArea.widthFull .checkRespond:before {
+	  content: "";
+	  position: absolute;
+	  top: 50%;
+	  left: 0.3em;
+	  margin-top: -0.6em;
+	  width: 1.3em;
+	  height: 1.3em;
+	  border-radius: 50%;
+	  background: #fff;
+	}
+	.listArea.widthFull .checkRespond:after {
+	  content: "!";
+	  position: absolute;
+	  top: 0.1em;
+	  left: 0.7em;
+	  font-size: 1.1em;
+	  color: #f00;
+	  font-weight: bolder;
+	}
+/*　所要時間　対応情報　非表示　*/
+.listArea.widthFull .everyQuestion.noTimeCols .col6,
+.listArea.widthFull .everyQuestion.noTimeCols .col7,
+.listArea.widthFull .everyQuestion.noTimeCols .respond{
+	display: none;
+}
+.listArea.widthFull .everyQuestion.noTimeCols .col5{
+	width: 54%;
+}
+
+
+
+.listArea.widthHalf{
+
+}
+
+.listArea.widthHalf .pulldown {
+	float: right;
+	font-size: 0.55em;
+}
+.listArea.widthHalf .everyQuestion .col5{
+	padding: 0.5em 0.3em;
+}
+
+.listArea.widthHalf .pulldown .pulldownButton {
+  height: 2.82em;
+  margin-top: 0.5em;
+  padding: 0 0.5em 0 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+	.listArea.widthHalf .pulldown .pulldownButton::before {
+	  left: 0.35em;
+	  margin-top: -1em;
+	  width: 1.66em;
+	  height: 2.1em;
+	}
+.listArea.widthHalf .pulldown .pulldownContents {
+  left: 100%;
+  top: 2.6em;
+  margin-left: -10.6em;
+  width: 10.6em;
+  padding: 0.7em 0 0.7em 2.4em;
+  background: #000;
+  box-shadow: 0;
+  color: #fff;
+  font-size: 1.27em;
+}
+.listArea.widthHalf .checkRespond{
+	position:relative;
+	margin: 0.5em 0;
+	padding: 0 0.5em 0 2em;
+}
+	.listArea.widthHalf .checkRespond:before {
+	  content: "";
+	  position: absolute;
+	  top: 50%;
+	  left: 0.3em;
+	  margin-top: -0.6em;
+	  width: 1.3em;
+	  height: 1.3em;
+	  border-radius: 50%;
+	  background: #fff;
+	}
+	.listArea.widthHalf .checkRespond:after {
+	  content: "!";
+	  position: absolute;
+	  top: 0.1em;
+	  left: 0.7em;
+	  font-size: 1.1em;
+	  color: #f00;
+	  font-weight: bolder;
+	}
+/*　所要時間　対応情報　非表示　*/
+.listArea.widthHalf .everyQuestion.noTimeCols .col6,
+.listArea.widthHalf .everyQuestion.noTimeCols .col7,
+.listArea.widthHalf .everyQuestion.noTimeCols .respond{
+	display: none;
+}
+.listArea.widthHalf .everyQuestion.noTimeCols .col5{
+	width: 54%;
+}
+
+/*　カードエリア　*****************************************************/
+.cardArea .buttonArea{
+	margin: 0.65em 0 0.44em 0;
+	font-size: 0.7em;
+}
+.cardArea .buttonArea .btnBlue{
+	margin-right: 2.6%;
+	width: 23%;
+}
+.cardArea .buttonArea .btnBlue:last-child{
+	margin-right: 0;
+}
+.cardArea .contentsArea{
+	padding:0;
+	margin:0;}
+.cardArea .contentsArea > *{
+	font-size: 0.55em;
+	line-height: 1.5em;
+}
+.cardArea .contentsArea .title{
+	padding-left: 0.3em;
+	line-height: 2.45em;
+}
+.cardArea .title .fcRd{
+	margin-left: 2.5em;
+}
+.cardArea .iconArea{
+	margin-left: 1.5em;
+}
+.cardArea .iconArea .icon{
+	margin: 0 0.8em 0 0;
+}
+.cardArea .contentsArea .btnBlue{
+	font-size: 1.27em;
+	line-height: 1.86em;
+}
+.cardArea .contentsArea .btnGray_Cancel{
+	font-size: 1.27em;
+	line-height: 1.86em;
+}
+	.cardArea .contentsArea::before{
+		left: -0.65em;
+		border-radius: 0.3em 0 0 0.3em;
+	}
+	.cardArea .contentsArea::after{
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: -0.55em;
+		margin-top: -0.2em;
+		border-style: solid;
+		border-width: 0.2em 0.35em 0.2em 0;
+		border-color: transparent #15349e transparent transparent;
+		cursor: pointer;
+	}
+.cardArea .callNo{
+
+	border: 1px solid #fff;
+}
+.cardArea .contentsArea .scrollArea{
+	width: 100%;
+	height: 85%;
+	overflow-y: scroll;
+	background-color: #fff;
+}
+
+.contentsArea .scrollArea.height100{
+	height: 95%;
+	}
+.cardArea .contentsList{
+	margin: 0.5em 0;
+	padding: 0 0.9em;
+}
+.cardArea .contentsList li{
+	display: inline;
+	margin-right: 2em;
+	white-space: nowrap;
+}
+.cardArea .questionArea{
+	border: 1px solid #ccc;
+		margin: 0 0.9em;
+}
+.cardArea .questionArea > *{
+	padding-left: 0.9em !important;
+}
+.cardArea .respond{
+	margin: 0.5em 0 0.5em 3em;
+}
+.cardArea .addButton{
+	padding: 0.3em 0.5em 0.3em 0;
+	border-top: 1px solid #ccc;
+}
+.cardArea .contentsArea .addButton .btnBlue{
+	width: 4.4em;
+}
+.cardArea .contentsArea .addQuestionButton .btnBlue{
+	margin: 0.3em 0;
+	width: 5.7em;
+}
+
+
+/*　ページャー　*****************************************************/
+.pager {
+    overflow: hidden;
+	margin-top:10px;
+	margin-bottom:10px;}
+ 
+.pager ul {
+    list-style: none;
+    position: relative;
+    float: left;
+}
+ 
+.pager ul li {
+    margin: 0 1px;
+    position: relative;
+    float: left;
+	font-size: 15px;
+	color: #999;
+	margin-left:10px;
+	margin-right:10px;
+}
+ 
+.pager ul li span,
+.pager ul li a {
+    display: block;
+    padding: 0em 10px;
+    border-radius: 3px;
+	font-size: 15px;
+}
+ 
+.pager ul li a {
+    color: #999;
+    text-decoration: none;
+}
+ 
+.pager ul li a:hover {
+    background: #999;
+    color: #FFF;
+}
+
+.pager .current{
+    background: #999;
+    color: #FFF;
+	    display: block;
+    border-radius: 3px;
+}
